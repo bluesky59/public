@@ -1,0 +1,833 @@
+﻿input {
+    /*webkit 浏览器 input 元素样式自定义*/
+    -webkit-appearance: none;
+    font-size: 16px;
+    outline-width: 0;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+}
+
+    input:focus {
+        outline-width: 0;
+        box-shadow: none;
+        -webkit-box-shadow: none;
+    }
+
+
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    width: 100%;
+    font-size: 14px;
+}
+
+    table td {
+        padding: 5px 6px;
+    }
+
+.table {
+    border-left: solid 1px #C8C7CC;
+    border-top: solid 1px #C8C7CC;
+}
+
+    .table thead {
+        background-color: #EDEDED;
+        font-weight: bold;
+    }
+
+        .table thead td {
+            padding: 8px 6px;
+        }
+
+    .table tbody {
+        background-color: #fff;
+    }
+
+        .table tbody td {
+            padding: 5px 6px;
+        }
+
+    .table tfoot {
+        background-color: #EDEDED;
+    }
+
+        .table tfoot td {
+            padding: 5px 6px;
+        }
+
+    .table td {
+        vertical-align: text-top;
+        border-right: solid 1px #C8C7CC;
+        border-bottom: solid 1px #C8C7CC;
+    }
+
+/*Hobbit etc...*/
+.etc {
+    /* overflow: hidden; */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.ico {
+    height: 32px;
+    width: 32px;
+    background-size: 32px 32px;
+    -webkit-background-size: 32px 32px;
+    display: inline-block;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/*Hobbit Container-Ui Content*/
+article {
+    padding: 6px;
+    display: block;
+}
+
+.arrow {
+    position: relative;
+    display: block;
+}
+
+    .arrow::after {
+        content: '';
+        width: 6px;
+        height: 6px;
+        border-right: 2px solid #C7C7CC;
+        border-top: 2px solid #C7C7CC;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        margin-top: -4px;
+        display: block;
+    }
+
+    .arrow.up::after {
+        -webkit-transform: rotate(-45deg) !important;
+        transform: rotate(-45deg) !important;
+    }
+
+    .arrow.right::after {
+        -webkit-transform: rotate(45deg) !important;
+        transform: rotate(45deg) !important;
+    }
+
+    .arrow.down::after {
+        -webkit-transform: rotate(135deg) !important;
+        transform: rotate(135deg) !important;
+    }
+
+    .arrow.left::after {
+        -webkit-transform: rotate(-135deg) !important;
+        transform: rotate(-135deg) !important;
+    }
+
+    /*toast*/
+     .toast{
+          width:100%;
+          height: 34px;
+          overflow:hidden;
+          text-align: center;
+          line-height: 34px;
+           color: #fff;
+   /*         opacity: 0;
+   -webkit-transition:all 0.3s ease-in-out;
+   transition:all 0.3s ease-in-out; */
+           position: fixed;
+           z-index: 19000;
+            left:50%;
+           bottom: 34px;
+           -webkit-transform:translateX(-50%);
+           transform:translateX(-50%);
+           
+   }
+   .toast .content{color:#fff;font-size:14px;display:inline-block;background: #414141;border-radius: 10px; padding:0 8px;}
+   
+   .t-show{
+-webkit-animation:fadeInUpBig 0.4s .2s ease both;
+-moz-animation:fadeInUpBig 0.4s .2s ease both;}
+
+@-webkit-keyframes fadeInUpBig{
+0%{opacity:0;bottom: 0%;}
+100%{opacity:1;bottom: 45px;}
+}
+@-moz-keyframes fadeInUpBig{
+0%{opacity:0;bottom: 0%;}
+100%{opacity:1;bottom: 45px;}
+}
+.t-out{
+-webkit-animation:fadeOutUpBig 0.3s .2s ease both;
+-moz-animation:fadeOutUpBig 0.3s .2s ease both;
+}
+
+@-webkit-keyframes fadeOutUpBig{
+0%{opacity:1;bottom: 45px;}
+100%{opacity:0;bottom: 0%;}
+}
+@-moz-keyframes fadeOutUpBig{
+0%{opacity:1;bottom: 45px;}
+100%{opacity:0;bottom: 0%;}
+}
+/*Hobbit Form-Ui Button*/
+.btn {
+    display: block;
+    font-weight: bold;
+    font-size: 20px;
+    height: 52px;
+    line-height: 52px;
+    text-align: center;
+    text-decoration: none;
+    border: 0;
+    margin: 12px 0;
+    border-radius: 4px;
+    border: solid #007AFF 1px;
+    background-color: #fff;
+    color: #007AFF;
+}
+
+    .btn.active {
+        background-color: #007AFF;
+        color: #fff;
+    }
+
+    .btn.orange {
+        background: #FF9C00;
+        color: #fff;
+        border: none;
+    }
+
+        .btn.orange.active {
+            background: #bf7500;
+        }
+
+    .btn.blue {
+        background: #007AFF;
+        color: #fff;
+        border: none;
+    }
+
+        .btn.blue.active {
+            background: #0055B2;
+        }
+    .btn.disabled {
+        background-color: #C8C7CC;
+        color: #666;
+    }
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    width: 100%;
+}
+
+    button.inline,
+    input[type="button"].inline,
+    input[type="submit"].inline,
+    input[type="reset"].inline {
+        width: auto !important;
+    }
+/*Hobbit Form-Ui Text*/
+input[type="text"],
+input[type="tel"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+input[type="date"] {
+    display: block;
+    background-color: #fff;
+    border: 1px solid #DDD;
+    padding: 8px 0;
+    text-indent: 6px;
+    /* line-height: 22px; */
+   /*  font-size: 16px; */
+    /* border-radius: 4px; */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    opacity: 0.01;
+}
+/*Hobbit Form-Ui Radio*/
+.radio {
+    border-radius: 10px;
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+    border: 1px solid #2377E8;
+    position: relative;
+    margin: 3px;
+    vertical-align: middle;
+}
+
+    .radio.checked::after {
+        content: '';
+        border-radius: 10px;
+        height: 12px;
+        width: 12px;
+        background-color: #2377E8;
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        box-shadow: inset 0px 1px 1px #0D3B79;
+    }
+
+    .radio input[type="radio"] {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .radio.disabled {
+        background-color: #ECECEC;
+        border: 1px solid #C8C7CC;
+    }
+
+        .radio.disabled.checked::after {
+            background-color: #CCC;
+        }
+/*Hobbit Form-Ui Checkbox*/
+.checkbox {
+    height: 18px;
+    width: 18px;
+    border: 1px solid #2377E8;
+    display: inline-block;
+    position: relative;
+    margin: 3px;
+    vertical-align: middle;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+}
+
+    .checkbox.checked {
+        background-color: #2377E8;
+    }
+
+        .checkbox.checked::after {
+            content: '';
+            width: 9px;
+            height: 5px;
+            border-left: 3px solid #fff;
+            border-bottom: 3px solid #fff;
+            -webkit-transform: rotate(-50deg);
+            transform: rotate(-50deg);
+            position: absolute;
+            left: 3px;
+            top: 3px;
+            display: block;
+        }
+
+    .checkbox input[type="checkbox"] {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .checkbox.disabled {
+        background-color: #ECECEC;
+        border: 1px solid #C8C7CC;
+    }
+
+        .checkbox.disabled.checked::after {
+            border-color: #CCC;
+        }
+/*Hobbit Form-Ui Swich*/
+.switch {
+    height: 33px;
+    width: 53px;
+    border-radius: 20px;
+    display: inline-block;
+    position: relative;
+    margin: 3px;
+    vertical-align: middle;
+}
+
+    .switch input[type="checkbox"] {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .switch.off {
+        background-color: #C7C7CC;
+    }
+
+        .switch.off::after {
+            content: '';
+            height: 31px;
+            width: 31px;
+            border-radius: 20px;
+            display: block;
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            background-color: #FFF;
+            box-shadow: 1px 0px 1px #666;
+            z-index: 1;
+        }
+
+    .switch.on {
+        background-color: #49D561;
+    }
+
+        .switch.on::after {
+            content: '';
+            height: 31px;
+            width: 31px;
+            border-radius: 20px;
+            display: block;
+            position: absolute;
+            top: 1px;
+            right: 1px;
+            background-color: #FFF;
+            box-shadow: -1px 0px 1px #666;
+            z-index: 1;
+        }
+
+    .switch.disabled::after {
+        content: '';
+        display: none;
+    }
+/*Hobbit Form-Ui Select*/
+select {
+    opacity: 0.01;
+}
+
+.select {
+    height: 52px;
+    line-height: 52px;
+    min-width: 80px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+    .select select {
+        opacity: 0.01;
+        position: absolute;
+        left: 0;
+        z-index: 2;
+        height: 100%;
+        width: 100%;
+    }
+
+    .select span {
+    }
+/*Hobbit Ui Tabs*/
+.tabs {
+    background-color: #fff;
+    background: #fff;
+}
+
+    .tabs .tab-title {
+        display: flexbox;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -ms-box;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        border-top:1px solid #f04c33;
+        border-bottom:1px solid #f04c33;
+        background:#fff;
+    }
+
+    .tabs .tab-title li {
+        box-flex: 1;
+        -webkit-box-flex: 1;
+        -moz-box-flex: 1;
+        flex: 1;
+        -ms-flex: 1;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        /* overflow: hidden; */
+        font-size: 1.4rem
+    }
+
+    .tabs .tab-title .selected {
+        color: #1295fe;
+        font-weight: bold;
+       /*  border-bottom:1px solid #1295fe; */
+    }
+
+    .tabs div {
+      
+    }
+/*Hobbit Ui Loader*/
+.loader {
+    position: fixed;
+    height: 36px;
+    line-height: 36px;
+    min-width: 36px;
+    top: 40%;
+    left: 50%;
+    margin-top: -18px;
+    z-index: 9999;
+    background: #FFF;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    border: solid 1px #ccc;
+}
+
+    .loader .text {
+        padding: 0 6px 0 36px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        max-width: 260px;
+    }
+
+    .loader .loading {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+    }
+
+.loading {
+    display: inline-block;
+    min-height: 32px;
+    min-width: 32px;
+    position: relative;
+}
+
+    .loading::before {
+        content: '';
+        background-image: url("data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAA3NCSVQICAjb4U/gAAAAPFBMVEX/ ///e3t7W1tbOzs7FxcW9vb21tbWtra2lpaWcnJyUlJSMjIyEhIR7e3tzc3Nra2tjY2NaWlpSUlJC QkIy4RnWAAAAFHRSTlMA/////////////////////////7rhY6kAAAAJcEhZcwAACxIAAAsSAdLd fvwAAAAcdEVYdFNvZnR3YXJlAEFkb2JlIEZpcmV3b3JrcyBDUzVxteM2AAAAFnRFWHRDcmVhdGlv biBUaW1lADEwLzAzLzEzQNAo6wAAAZZJREFUSInNlFmygyAQRQUEB5Sh2f9eXyMiqA0v+cv9iQX3 0GNlGEgJ7wV905APwX8FBNT/LumcfAMKQDUAB+DeAIQADcACwPoEdGiXg8EB+B0Q8WtqFWEQ2O+A wQ/X8g88hpA1oOJHZyIaAVsDOI+wt/3YElTMGFKlMz2Pcd9z/ydIrT1XA7kw5yvv8zysc25L3Ymz sOWpsiHChjKPCDh3TmCvU2bGsHQac7uAMRGutQGpFPQXw5IIS9oZJL+uD7k+CE0B5rCb5zTGvQd4 Kl1lNzolBzN58TNi2pzSrOURPpzChdnMJbJHUZc/bspeALpJQ9rBC2BXiO2zlH5ao17oC04mzlet NbkzXAjBX6ez1j3giajDrlc6JZFUPZHseqT9byTZzz9Qpe7O9MtuRLTnBi3LUhUySpnD8grg65pL EggsJZBEXQvD3606AizxHTVNkWCRaFYWfTmjCXXmJHv7FgPwGhj6ISb0pyZdgJCl7pd4rrgCuiFm 9MsnwDshSoAK6IXgZ8V3YOg3lgA+0pQG94VUy/8HAgIajwCJBUUAAAAASUVORK5CYII=");
+        background-size: 24px 24px;
+        -webkit-background-size: 24px 24px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        -webkit-animation: loading 1s linear infinite;
+        animation: loading 1s linear infinite;
+        height: 32px;
+        width: 32px;
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -16px;
+        margin-left: -16px;
+    }
+
+@-webkit-keyframes loading {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    8.32% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    8.33% {
+        -webkit-transform: rotate(30deg);
+    }
+
+    16.65% {
+        -webkit-transform: rotate(30deg);
+    }
+
+    16.66% {
+        -webkit-transform: rotate(60deg);
+    }
+
+    24.99% {
+        -webkit-transform: rotate(60deg);
+    }
+
+    25% {
+        -webkit-transform: rotate(90deg);
+    }
+
+    33.32% {
+        -webkit-transform: rotate(90deg);
+    }
+
+    33.33% {
+        -webkit-transform: rotate(120deg);
+    }
+
+    41.65% {
+        -webkit-transform: rotate(120deg);
+    }
+
+    41.66% {
+        -webkit-transform: rotate(150deg);
+    }
+
+    49.99% {
+        -webkit-transform: rotate(150deg);
+    }
+
+    50% {
+        -webkit-transform: rotate(180deg);
+    }
+
+    58.32% {
+        -webkit-transform: rotate(180deg);
+    }
+
+    58.33% {
+        -webkit-transform: rotate(210deg);
+    }
+
+    66.65% {
+        -webkit-transform: rotate(210deg);
+    }
+
+    66.66% {
+        -webkit-transform: rotate(240deg);
+    }
+
+    74.99% {
+        -webkit-transform: rotate(240deg);
+    }
+
+    75% {
+        -webkit-transform: rotate(270deg);
+    }
+
+    83.32% {
+        -webkit-transform: rotate(270deg);
+    }
+
+    83.33% {
+        -webkit-transform: rotate(300deg);
+    }
+
+    91.65% {
+        -webkit-transform: rotate(300deg);
+    }
+
+    91.66% {
+        -webkit-transform: rotate(330deg);
+    }
+
+    99.99% {
+        -webkit-transform: rotate(330deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    8.32% {
+        transform: rotate(0deg);
+    }
+
+    8.33% {
+        transform: rotate(30deg);
+    }
+
+    16.65% {
+        transform: rotate(30deg);
+    }
+
+    16.66% {
+        transform: rotate(60deg);
+    }
+
+    24.99% {
+        transform: rotate(60deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    33.32% {
+        transform: rotate(90deg);
+    }
+
+    33.33% {
+        transform: rotate(120deg);
+    }
+
+    41.65% {
+        transform: rotate(120deg);
+    }
+
+    41.66% {
+        transform: rotate(150deg);
+    }
+
+    49.99% {
+        transform: rotate(150deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    58.32% {
+        transform: rotate(180deg);
+    }
+
+    58.33% {
+        transform: rotate(210deg);
+    }
+
+    66.65% {
+        transform: rotate(210deg);
+    }
+
+    66.66% {
+        transform: rotate(240deg);
+    }
+
+    74.99% {
+        transform: rotate(240deg);
+    }
+
+    75% {
+        transform: rotate(270deg);
+    }
+
+    83.32% {
+        transform: rotate(270deg);
+    }
+
+    83.33% {
+        transform: rotate(300deg);
+    }
+
+    91.65% {
+        transform: rotate(300deg);
+    }
+
+    91.66% {
+        transform: rotate(330deg);
+    }
+
+    99.99% {
+        transform: rotate(330deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/*Hobbit Ui Dialog*/
+.dialog {
+    position: fixed;
+    width: 320px;
+    left: 50%;
+    top: 35%;
+    margin-left: -160px;
+    z-index: 9999;
+   /*  background: #FFF; */
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+    .dialog .title {
+      text-align: center;
+  height: 25px;
+  background-color: #0078e7;
+  color: #fff;
+    padding: 10px;
+  font-weight: bold;
+  font-size:18px
+    }
+
+    .dialog .content {
+        padding: 6px 10px;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        overflow-x: hidden;
+        overflow-y: auto;
+        font-size: 14px;
+        word-wrap: break-word;
+        text-align:center;
+        line-height: 24px;
+        margin-top: 10px;
+        position: relative;
+    }
+
+    .dialog .btns {
+        position: relative;
+        bottom: 0;
+        /*height: 45px;
+        line-height: 45px;
+        width: 100%;*/
+        border-top: 1px #C8C8C8 solid;
+        color: #007AFF;
+        font-size: 18px;
+        display: box;
+        display: -webkit-box;
+        overflow: hidden;
+    }
+
+        .dialog .btns a {
+            text-align: center;
+            display: block;
+            -webkit-box-flex: 1;
+            box-flex: 1;
+            border-right: 1px #C8C8C8 solid;
+            height: 100%;
+        }
+
+            .dialog .btns a:last-child {
+                border-right: none;
+            }
+
+            .dialog .btns a.active,
+            .dialog .btns a:active {
+                background: #EEE;
+            }
+.dialog .content a{
+     position: absolute;
+     display: block;
+     text-indent: -999px;
+}
+.hb-closeBtn{
+    right: 39px;
+    top: 7px;
+    width: 30px;
+}
+.hb-loginBtn {
+    left: 50%;
+    bottom: 50px;
+    width: 120px;
+    margin-left: -60px;
+    height: 38px;
+}
+.hb-confirmBtn {
+    left: 50%;
+    bottom: 10px;
+    width: 170px;
+    margin-left: -85px;
+    height: 38px;
+}
